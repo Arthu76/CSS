@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+
+        ul { padding: 0;}
+        div { background-color: seagreen;}
+        span { background-color: dodgerblue;}
+        li { background-color: purple;}
+
+        div, span, li { /* o span irá ignorar a largura e a altura pedida */
+            width: 50%;
+            width: 200px;
+            height: 80px;
+            padding-top: 30px;
+            text-align: center;
+            /* a maioria das tags tem um display diferente */
+
+            display: block;/* quando se usa o display block, cada tag fica com uma linha individual */
+
+            display: inline;/* com o inline ele alinha os itens e ignora a altura e a largura */
+
+            display: inline-block;/* com o inline-block ele alinha os itens e ignora considerando a altura e a largura */
+        }
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>

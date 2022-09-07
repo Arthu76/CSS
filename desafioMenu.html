@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(200, 214, 220);
+        }
+
+        .cabecalho {
+            display: flex;
+            background-color: rgb(33, 33, 33);
+        }
+
+        .menu-toggle {
+            display: none;
+            margin-top: 35px;
+            margin-bottom: 35px;
+            width: 40px;
+            margin-left: 50px;
+            /* float: right; */
+            background-color: rgb(124, 124, 124);
+            color: white;
+            border: none;
+            border-radius: 5px;
+
+        }
+
+        .autenticacao {
+            display: none;
+            font-size: 30px;
+            margin-left: 450px;
+            margin-top: 30px;
+            font-family: Oswald;
+        }
+
+        .destaque {
+            background-color: red;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .destaque:hover {
+            background-color: rgb(255, 154, 154);
+            transition: 0.2s;
+        }
+
+        a {
+            color: white;
+        }
+
+        .menu a.selected {
+            background-color: rgb(0, 157, 255);
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        img {
+            width: 350px;
+            margin: 20px;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        li {
+            font-size: 30px;
+            font-family: Oswald;
+            padding: 10px;
+        }
+
+        li:hover {
+            background: rgb(0, 157, 255);
+            padding: 10px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .menu-toggle { display: block; }
+            .menu { display: none;}
+            .autenticacao { display: none;}
+        }
+
+        @media (min-width: 1500px) {
+            .autenticacao { display: block; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio" class="selecionado">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos" class="selecionado">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre" class="selecionado">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato" class="selecionado">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+//     document.querySelectorAll('[selecionado]').forEach(folder => {
+//     folder.onclick = function(e) {
+//       const d = ul.style.background
+//       ul.style.background = d === 'black' ? 'rgb(0, 157, 255)' : 'black'
+//     }
+//   })
+
+    // function selecionar(k) {
+    //     var x = document.getElementsByClassName("selecionado");
+    //     for(let i = 0; i < x.length; i++) {
+    //         x[i].style.background = "rgb(0, 157, 255)"
+    //         x[i].style.padding = "10px;"
+    //         // x[i].style.border-radius = "10px;"
+    //     }
+    // }
+    // (onclick="selecionar(this.id)")
+
+    window.onhashchange = function(elemento) {
+        
+        const velhaURL = elemento.oldURL.split('#')[1]
+        const novaURL = elemento.newURL.split('#')[1]
+
+        const antigoMenu = document.querySelector(`.menu a[href='#${velhaURL}']`)
+        const novoMenu = document.querySelector(`.menu a[href='#${novaURL}']`)
+
+        antigoMenu && antigoMenu.classList.remove('selected')
+        novoMenu && novoMenu.classList.add('selected')
+    }
+
+
+    </script>
+</body>
+
+</html>

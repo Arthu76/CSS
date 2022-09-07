@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Texto</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            /* valores padrôes */
+            font-size: 1em; /* baseado no valor padrão */
+            font-size: 100%;/* equivalente a 1em */
+            font-size: 16px;/* equivalente a 100% */
+            font-size: 12pt;/* equivalente a 16px*/
+
+            /* unidades absolutas */
+            font-size: 100px;/* tamanho do pixel é relativo( nem sempre vai ser exatamente o pixel da tela ) */
+            font-size: 72pt;/* pontos */
+            font-size: 1in;/* polegada */
+
+            /* unidades relativas */
+            /*font-size: 2.2em /* ...mais o font-size da referencia mais proxima */;
+            /*font-size: 2.2rem;/* ...mais o font-size da referencia maior */
+            /*font-size: 50vh;/* ...mais a altura do viewPort */
+            /*font-size: 10vw;/* ...mais a largura do viewPort */
+
+            /* mais sobre fontes */
+            font-family: 'Indie Flower', cursive;/* caso não ache a primeira ira procurar a proxima*/
+            font-weight: 100;/* peso da fonte */
+            text-transform: uppercase;/* todas as letras maiusculas e lowercase para todas as letras minusculas */
+            text-decoration: overline underline line-through;/* colocar uma linha em baixo em cima ou no meio */
+            word-spacing: 10px;/* espaço entre as palavras */
+            letter-spacing: 10px;/* espaço entre as letras */
+            text-align: center;/* alinhar o texto */
+        }
+
+        .botao {
+            font-size: 28;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque {
+            color: #fff;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+
+        .destaque:active {
+            box-shadow: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            Que texto
+            <br>legal!!!
+        </p>
+    </div>
+    <a href="http://google.com" class="botao destaque">Google</a>
+</body>
+
+</html>

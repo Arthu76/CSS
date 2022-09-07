@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #01</title>
+    <style>
+        .unidades-absolutas {
+            position: absolute;
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px #222;
+            margin: 30px;
+            width: 4cm;/* pouco usado */
+            height: 20mm;/* pouco usado */
+            top: 15px;
+            left: 200px;
+        }
+
+        .unidades-relativas {
+            position: absolute;
+            font-size: 4em; /* uma fonte que é baseada na tag 'pai'( X vezes o tamanho original ) */
+            padding: 5%;/* porcentagem do tamanho original */
+            border: solid 1vw/* aumenta ou diminui dependendo da largura da tela(viewPort) */ #222;
+            margin: .8%;
+            width: 20vw;
+            height: 15vh;/* aumenta ou diminui dependendo da altura da tela */
+            bottom: 5%;
+            right: 5%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unidades-absolutas">Opa!</div>
+    <div class="unidades-relativas">Epa!</div>
+</body>
+
+</html>

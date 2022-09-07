@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overflow</title>
+    <style>
+        div {/* não há espaço para caber o conteudo da div */
+            font-size: 40px;
+            height: 100px;
+            width: 260px;
+            border: solid 3px;
+
+            /* estratégias para tirar o OverFlow */
+
+            /*overflow: hidden;/* irá esconder o conteudo fora da caixa */
+
+            /*overflow: scroll;/* irá esconder o conteudo mas será possivel ver com a barra de rolagem */
+
+            overflow-x: hidden;/* só poderá rolar para os lados, e com o y para cima e para baixo (para que não possa rolar pode-se utilizar o hidden) */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        TudoFuncionaMuitoBemEmCSS!!!
+        Texto muito grande para caber nessa div.
+        Já pensou qual será o comportamento padrão?
+    </div>
+</body>
+</html>
